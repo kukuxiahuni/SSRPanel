@@ -237,6 +237,8 @@ class AlipaySubmit
      *
      * @param array $para 签名参数组
      *
+     * php7.2 中不支持 each函数，调整为 fun_adm_each
+     *
      * @return array
      */
     function paraFilter($para)
