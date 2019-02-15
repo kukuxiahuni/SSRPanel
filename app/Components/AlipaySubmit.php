@@ -242,7 +242,7 @@ class AlipaySubmit
     function paraFilter($para)
     {
         $para_filter = [];
-        while (list ($key, $val) = each($para)) {
+        while (list ($key, $val) = fun_adm_each($para)) {
             if ($key == "sign" || $key == "sign_type" || $val == "") continue;
             else    $para_filter[$key] = $para[$key];
         }

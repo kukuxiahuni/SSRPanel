@@ -208,7 +208,7 @@ class PaymentController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
 
-            Log::error('创建支付订单失败：' . $e->getMessage());
+            Log::error('创建支付订单失败：' . $e);
 
             return Response::json(['status' => 'fail', 'data' => '', 'message' => '创建订单失败：' . $e->getMessage()]);
         }
